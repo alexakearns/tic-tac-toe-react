@@ -37,7 +37,7 @@ class Board extends React.Component {
   }
 
   render() {
-    const winner = calculateWinner(this.state.square);
+    const winner = calculateWinner(this.state.squares);
     let status; 
     if (winner) {
       status = 'Winner: ' + winner;
@@ -103,10 +103,9 @@ function calculateWinner(squares) {
   }
   return null;
 }
-
 // ========================================
 
 ReactDOM.render(
   <Game />,
   document.getElementById('root')
-);
+  );
